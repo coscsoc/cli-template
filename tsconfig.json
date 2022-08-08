@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node", // 模块解析策略，ts默认用node的解析策略
+    "lib": ["es6"],
+    "typeRoots": ["./node_modules/@types"], // 声明文件目录
+    "outDir": "./build", // 重定向输出目录
+    "rootDir": "./src", // 仅用来控制输出的目录结构
+    "alwaysStrict": true
+    /* "sourceMap": false,
+    "noEmit": false, // 编译后不生成js
+    "noEmitHelpers": false, // 不生成helper函数，减小体积
+    "importHelpers": false, // 通过tslib引入helper函数，文件必须是模块
+    "strictNullChecks": false, //不允许把null、undefined赋值给其他类型的变量
+    "allowUnreachableCode": true // 有无法访问的代码,也不会报错 */
+  },
+  "exclude": [
+    // 不参与打包的目录
+    "node_modules",
+    "build",
+    "**/*.test.ts",
+    "temp",
+    "scripts",
+    "./src/__tests__"
+  ],
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": true,
+  "compileOnSave": false,
+  "buildOnSave": false
+}
